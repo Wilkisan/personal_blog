@@ -1,0 +1,154 @@
+---
+layout: default
+title: Post
+---
+<article class="post">
+  <div class="post__actions">
+      <a href="index.html">вернуться назад</a>
+      <a href="">поделиться<img class="post__actions--icon" src="assets/images/share.svg" alt="поделиться">
+      </a>
+  </div>
+   <div class="post__header">
+        <h1 class="post__title post__title--mb0">Еще есть возможность создавать сайты.
+       </h1>
+       <ul class="post__data">
+            <li class="post__data-item">
+                <time datetime="2021-02-02 19:20">02.02.2021</time>
+            </li>
+            <li class="post__data-item">
+                <a href="">создание сайтов</a>
+            </li>
+        </ul>
+   </div>
+    <div class="post__content">
+       <div class="post__text">
+           <h2>Text h2 </h2>
+            <p>Lorem ipsum dolor sit amet, <a href=""> consectetur adipisicing</a> elit. Praesentium ipsam vel explicabo aspernatur mollitia, rem adipisci facilis, aliquam iusto eum quae rerum quos doloribus numquam atque iste, autem vitae hic.</p>
+            <h3>Text h3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ipsam vel explicabo aspernatur mollitia, rem adipisci facilis, aliquam iusto eum quae rerum quos doloribus numquam atque iste, autem vitae hic.</p>
+            <h4>Text h4</h4>
+
+            <p>
+                <img src="assets/images/code.jpg" alt="">
+            </p>
+            <ul>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+            </ul>
+            <ol>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+            </ol>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+            </table>
+            <p>
+                <span class="fr-video">
+                    <iframe
+                    src="https://www.youtube.com/embed/ZU6VG1pQsUc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </span>
+            </p>
+       </div><!-- /.post__text-->
+    </div><!-- /.post__content-->
+    <div class="related">
+        <h3 class="post__subtitle">Интересно почитать</h3>
+
+        <ul class="related__list">
+            <li class="related__list-item">
+                <h4 class="related__list-title">
+                    <a  href="#">Как изготовить купальник быстро?</a>
+                </h4>
+                <time class="related__list-date" datetime="2020-10-21 20:56">21.10.2020</time>
+            </li>
+            <li class="related__list-item">
+                <h4 class="related__list-title">
+                    <a  href="#">Как изготовить купальник быстро?</a>
+                </h4>
+                <time class="related__list-date" datetime="2020-10-21 20:56">21.10.2020</time>
+            </li>
+            <li class="related__list-item">
+                <h4 class="related__list-title">
+                    <a  href="#">Как изготовить купальник быстро?</a>
+                </h4>
+                <time class="related__list-date" datetime="2020-10-21 20:56">21.10.2020</time>
+            </li>
+            <li class="related__list-item">
+                <h4 class="related__list-title">
+                    <a  href="#">Как изготовить купальник быстро?</a>
+                </h4>
+                <time class="related__list-date" datetime="2020-10-21 20:56">21.10.2020</time>
+            </li>
+        </ul>
+    </div><!-- /.related -->
+
+
+        <h3 class="post__subtitle">Обсуждение</h3>
+
+        <form class="form" action="/" method="post">
+            <div class="form__group">
+                <textarea class="form__control form__control--textarea" name="comment-text" placeholder="текст комментария"></textarea>
+                <span class="form__line"></span>
+            </div>
+            <botton class="btn btn--blue btn--rounded btn--sm" type="submit">Отправить</botton>
+        </form>
+
+        <ul class="comments">
+            <li class="commennts__item">
+                <div class="comments__header">
+                    <img class="comments__avatar" src="https://placehold.it/30" alt="">
+
+                    <div class="comments__author">
+                        <div class="comments__name">Саваня Васечкин</div>
+                        <time class="comments__pubdate" datetime="2020-11-21 20:53">1 неделю назад</time>
+                    </div>
+                </div>
+                <div class="comments__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga non ipsa animi minima commodi, esse saepe. Dolorem cupiditate, quis beatae, nisi minima quam. Maxime iste reprehenderit sapiente culpa autem laborum.
+                </div>
+                <button class="comments__reply" tupe="button">ответить</button>
+                     <ul class="comments">
+                        <li class="commennts__item">
+                            <div class="comments__header">
+                                <img class="comments__avatar" src="https://placehold.it/30" alt="">
+
+                                <div class="comments__author">
+                                    <div class="comments__name">Саваня Васечкин</div>
+                                    <time class="comments__pubdate" datetime="2020-11-21 20:53">1 неделю назад</time>
+                                </div>
+                            </div>
+                            <div class="comments__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga non ipsa animi minima commodi, esse saepe. Dolorem cupiditate, quis beatae, nisi minima quam. Maxime iste reprehenderit sapiente culpa autem laborum.
+                            </div>
+                            <button class="comments__reply" tupe="button">ответить</button>
+                        </li>
+                    </ul>
+            </li>
+        </ul>
+
+</article><!-- /.post -->
+
+
+
+
+<!-- Pagination -->
+<ul class="pagination">
+    <li class="pagination__item">
+        <a class="pagination__link" href="">&lt;</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link" href="">1</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link active" href="">2</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link" href="">3</a>
+    </li>
+    <li class="pagination__item">
+        <a class="pagination__link" href="">&gt;</a>
+    </li>
+</ul>
