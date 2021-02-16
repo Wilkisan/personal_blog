@@ -370,14 +370,66 @@ a {
   top: 0;
   right: 0;
   z-index: 1000; }
+  @media screen and (max-width: 991px) {
+    .header {
+      width: 100%; } }
 
 .header__left {
   width: 60%; }
+  @media screen and (max-width: 991px) {
+    .header__left {
+      width: 40%; } }
 
 .header__right {
   width: 40%;
   display: flex;
   justify-content: flex-end; }
+  @media screen and (max-width: 991px) {
+    .header__right {
+      width: 60%; } }
+
+.burger {
+  width: 3rem;
+  height: 2rem;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0;
+  color: transparent;
+  position: absolute;
+  left: 1.5rem;
+  transform: translateY(50%); }
+  .burger:before, .burger:after,
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0; }
+  .burger:before, .burger:after {
+    content: "";
+    transition: transform .2s linear; }
+  .burger:before {
+    top: 0; }
+  .burger:after {
+    bottom: 0; }
+  .burger span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .2s linear; }
+  .burger.active span {
+    opacity: 0; }
+  .burger.active:before, .burger.active:after {
+    top: 50%; }
+  .burger.active:before {
+    transform: rotate(45deg); }
+  .burger.active:after {
+    transform: rotate(-45deg); }
+
+@media screen and (max-width: 991px) {
+  .nav {
+    display: none; } }
 
 .nav__list {
   display: flex; }
@@ -461,6 +513,9 @@ a {
   top: 0;
   left: 0;
   z-index: 1000; }
+  @media screen and (max-width: 991px) {
+    .sidebar {
+      display: none; } }
 
 .sidebar__header {
   height: 180px;
@@ -482,12 +537,19 @@ a {
 
 .main {
   padding: 10rem 0 8rem 300px; }
+  @media screen and (max-width: 991px) {
+    .main {
+      padding-left: 0; } }
 
 .container {
   max-width: 70rem;
   margin: 0 auto;
   padding-left: 5rem;
   padding-right: 5rem; }
+  @media screen and (max-width: 700px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; } }
 
 .profile__avatar {
   display: block;
@@ -625,8 +687,9 @@ a {
 
 .add-post__textarea {
   display: block;
-  width: 80%;
+  flex-grow: 1;
   height: 26px;
+  overflow: hidden;
   border: none;
   background: transparent;
   resize: none;
@@ -637,7 +700,8 @@ a {
     color: #D2D2D2; }
 
 .add-post__form-actions {
-  width: 20%;
+  width: 12rem;
+  flex-shrink: 0;
   display: flex;
   justify-content: flex-end; }
 
@@ -1031,7 +1095,7 @@ a {
   text-align: center; }
 
 .modal {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;

@@ -10,14 +10,28 @@
     top: 0;
     right: 0;
     z-index: $z-index-sidebar;
+
+    @include breakpoint($tabled-bp) {
+        width: 100%;
+    }
+
 }
 
 .header__left {
     width: 60%;
+
+    @include breakpoint($tabled-bp) {
+        width: 40%;
+    }
+
 }
 
 .header__right {
     width: 40%;
     display: flex;
     justify-content: flex-end;
+
+    @include breakpoint($tabled-bp) {
+        width: 60%;
+    }
 }

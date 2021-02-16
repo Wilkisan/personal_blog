@@ -10,6 +10,10 @@
     left: 0;
     z-index: $z-index-sidebar;
 
+    @include breakpoint($tabled-bp) {
+        display: none;
+    }
+
 }
 
 .sidebar__header {
