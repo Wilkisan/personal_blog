@@ -16,7 +16,7 @@ body {
     color: $white;
 
     &.no-scroll {
-
+        overflow: hidden;
     }
 }
 
@@ -54,12 +54,11 @@ a {
 @import "blocks/related";
 @import "blocks/comments";
 @import "blocks/form";
-<<<<<<< HEAD
-=======
 @import "blocks/work";
 @import "blocks/tags";
 @import "blocks/modal";
->>>>>>> 8bb932ce (Three page and all blocks)
+@import "blocks/cabinet";
+
 
 
 
