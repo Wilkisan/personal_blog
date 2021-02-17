@@ -19,6 +19,12 @@ body {
     &.no-scroll {
         overflow: hidden;
     }
+
+    @include breakpoint($tabled-bp) {
+        &.show-sidebar {
+        overflow: hidden;
+    }
+}
 }
 
 *,

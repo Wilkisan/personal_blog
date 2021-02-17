@@ -6,6 +6,11 @@
     background-color: $primary;
     box-shadow: 0 15px 25px rgba($black, .35);
     border-radius: 5px;
+
+    @include breakpoint($mobail-bp){
+        flex-direction: column;
+    }
+
 }
 
 .work__preview {
@@ -16,6 +21,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        }
+
+    @include breakpoint($mobail-bp) {
+            width: 100%;
+            height: 15rem;
     }
 }
 
@@ -24,6 +34,12 @@
     flex-direction: column;
     max-width: 29rem;
     padding: 2.5rem;
+
+    @include breakpoint($mobail-bp){
+        max-width: none;
+
+        padding: 1.5rem;
+    }
 }
 
 .work__title {
@@ -36,6 +52,10 @@
     a {
         color: inherit;
     }
+
+    @include breakpoint($mobail-bp) {
+        margin-bottom: 2rem;
+    }
 }
 
 .work_description {
@@ -44,11 +64,20 @@
     line-height: 1.7;
     font-weight: 300;
     color: #D2D2D2;
+
+    @include breakpoint($mobail-bp) {
+        margin-bottom: 2rem;
+        font-style: 1.4rem;
+    }
 }
 
 .work__footer {
     margin-top: auto;
     text-align: right;
+
+    @include breakpoint($mobail-bp){
+        text-align: left;
+    }
 }
 
 

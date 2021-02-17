@@ -1,6 +1,10 @@
 .social {
     display: flex;
     justify-content: center;
+
+    @include breakpoint($tabled-bp) {
+        display: none;
+    }
 }
 
 .social__item {

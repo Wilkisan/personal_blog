@@ -1,12 +1,28 @@
 .nav {
+
+    &--mobile {
+        display: none;
+        margin: 3rem 0;
+    }
+
     @include breakpoint($tabled-bp) {
         display: none;
+
+            &--mobile {
+            display: block;
+
+        }
     }
+
 
 }
 
 .nav__list {
     display: flex;
+
+    @include breakpoint($tabled-bp) {
+        flex-direction: column;
+    }
 }
 
 .nav__item {
@@ -20,6 +36,14 @@
 
         > .subnav {
             display: block;
+        }
+    }
+
+    @include breakpoint($tabled-bp) {
+        &:hover {
+            .nav__link {
+                background: none;
+            }
         }
     }
 }
@@ -54,5 +78,12 @@
             right: 1.35rem;
             transform: translateY(-50%);
         }
+    }
+
+    @include breakpoint($tabled-bp){
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 1.6rem;
     }
 }

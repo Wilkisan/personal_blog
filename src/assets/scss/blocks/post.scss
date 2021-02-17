@@ -6,6 +6,10 @@
     box-shadow: 0 15px 25px rgba($black, .35);
     border-radius: 5px;
 
+    @include breakpoint($mobail-bp){
+        padding: 1.5rem;
+    }
+
 }
 
 .post__header {
@@ -29,7 +33,9 @@
 
 .post__title {
     margin-bottom: 1.5rem;
+
     font-size: 1.8rem;
+    line-height: 1.4;
     color: $white;
     font-weight: 500;
 
@@ -38,8 +44,8 @@
 
     }
 
-    &--mb0 {
-        margin-bottom: .5rem;
+    &--open {
+        margin-bottom: .75rem;
     }
 }
 
@@ -121,6 +127,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint($mobail-bp) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .post__data {
@@ -131,11 +142,11 @@
 
     a {
         color: inherit;
-        text-decoration: none;
+    }
+    @include breakpoint($mobail-bp){
+        margin-bottom: 1rem;
 
-        &:hover {
-            text-decoration: underline;
-        }
+        font-size: 1.2rem;
     }
 }
 
