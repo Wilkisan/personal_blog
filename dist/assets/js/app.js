@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/assets/js/auth.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/auth.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("async function sendForm(form) {\r\n    info.innerHTML = '';\r\n    let formData = new FormData(form);\r\n    let response = await fetch(\"php/auth_obr.php\", {\r\n        method: \"POST\"\r\n        , body: formData\r\n    });\r\n    let result = await response.text();\r\n    if (result == \"success\") location.href = \"index.html\";\r\n    else info.innerHTML = `Логин или пароль введён неверно!`;\r\n}\r\n\n\n//# sourceURL=webpack:///./src/assets/js/auth.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/mobileNav.js":
 /*!************************************!*\
   !*** ./src/assets/js/mobileNav.js ***!
@@ -108,6 +119,28 @@ eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body 
 
 /***/ }),
 
+/***/ "./src/assets/js/reg.js":
+/*!******************************!*\
+  !*** ./src/assets/js/reg.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("async function sendForm(form) {\r\n    let formData = new FormData(form);\r\n    let response = await fetch(\"php/reg_obr.php\", {\r\n        method: \"POST\",\r\n        body: formData\r\n    });\r\n    let result = await response.text();\r\n    if (result == \"success\") {\r\n        location.href = \"signin.html\";\r\n    }\r\n    else if (result == \"exist\") {\r\n        info.innerText = `Такой пользователь уже есть!`;\r\n    }\r\n    else {\r\n        console.log(\"Неизвестная ошибка\");\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack:///./src/assets/js/reg.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/sign.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/sign.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("let sign_button;\r\n\r\nif (session_start() == false) location.href = \"signin.html\";\r\n\n\n//# sourceURL=webpack:///./src/assets/js/sign.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/textarea.js":
 /*!***********************************!*\
   !*** ./src/assets/js/textarea.js ***!
@@ -120,13 +153,13 @@ eval("const textArea = document.querySelectorAll('[data-autoresize]');\r\n\r\nte
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************!*\
-  !*** multi ./src/assets/js/mobileNav.js ./src/assets/js/modal.js ./src/assets/js/textarea.js ***!
-  \***********************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** multi ./src/assets/js/auth.js ./src/assets/js/mobileNav.js ./src/assets/js/modal.js ./src/assets/js/reg.js ./src/assets/js/sign.js ./src/assets/js/textarea.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\mobileNav.js */\"./src/assets/js/mobileNav.js\");\n__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\modal.js */\"./src/assets/js/modal.js\");\nmodule.exports = __webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\textarea.js */\"./src/assets/js/textarea.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/mobileNav.js_./src/assets/js/modal.js_./src/assets/js/textarea.js?");
+eval("__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\auth.js */\"./src/assets/js/auth.js\");\n__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\mobileNav.js */\"./src/assets/js/mobileNav.js\");\n__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\modal.js */\"./src/assets/js/modal.js\");\n__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\reg.js */\"./src/assets/js/reg.js\");\n__webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\sign.js */\"./src/assets/js/sign.js\");\nmodule.exports = __webpack_require__(/*! E:\\www\\personal_blog\\src\\assets\\js\\textarea.js */\"./src/assets/js/textarea.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/auth.js_./src/assets/js/mobileNav.js_./src/assets/js/modal.js_./src/assets/js/reg.js_./src/assets/js/sign.js_./src/assets/js/textarea.js?");
 
 /***/ })
 

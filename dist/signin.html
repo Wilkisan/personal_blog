@@ -55,12 +55,12 @@
            </div>
            <div class="header__right">
                <nav class="nav">
-                   <ul class="nav__list">
+                   <ul class="nav__list" id="sign_button">
                        <li class="nav__item">
                            <a class="nav__link" href="profile.html">Профиль</a>
                        </li>
                        <li class="nav__item">
-                           <a class="nav__link" href="">Выйти</a>
+                           <a class="nav__link" href="signup.html">Войти</a>
                        </li>
                    </ul>
                </nav>
@@ -164,16 +164,17 @@
                   <h1 class="page__title page__title--center">Вход</h1>
                   
                   
-                  <form class="form form--auth" action="/">
+                  <form class="form form--auth" onsubmit="sendForm(this); return false;">
                       <div class="form__group form__group--md">
-                          <input class="form__control" type="email" placeholder="Ваш e-mail">
+                          <input name="email" class="form__control" type="email" placeholder="Ваш e-mail">
                               <span class="form__line"></span>
                       </div>
                   
                       <div class="form__group form__group--md">
-                          <input class="form__control" type="password" placeholder="пароль">
+                          <input name="pass" class="form__control" type="password" placeholder="пароль">
                               <span class="form__line"></span>
                       </div>
+                      <p id="info" style="color:red"></p>
                   
                       <div class="form__group form__group--md">
                           <div class="form__footer form__footer--center">
@@ -279,6 +280,27 @@
                 </ul>
         </div>
     </div><!-- /.modal -->
+    <!-- Pagination -->
+    <ul class="pagination">
+        <li class="pagination__item">
+            <a class="pagination__link" href="">&lt;</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="index.html">1</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="works.html">2</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="post.html">3</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="">&gt;</a>
+        </li>
+    </ul>
+
+
+
 
     <script src="assets/js/app.js"></script>
 </body>
